@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('passagers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->integar('telephone');
+            $table->string('historique');
+            $table->string('password');
+            $table->date('date');
+            $table->string('bio',250);
+            $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
